@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./bulma.min.css" />
+    <link rel="stylesheet" href="./Main.css" />
+    <script src="https://cdn.jsdelivr.net/npm/preact/dist/preact.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/preact/10.6.2/hooks.umd.min.js"
+      integrity="sha512-4hbZZ9Sq6KvaG7cZfeBvKulin8tZ+lypQFrQGWytMS+HADMTkdJ/g8WH0wUn5GazBM2yWI+kaNiJHes8J2DIzw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      let h = preact.h;
+      let render = preact.render;
+      let useState = preactHooks.useState;
+      let useEffect = preactHooks.useEffect;
+
+      /// let HOST = location.origin.replace(/^http/, 'ws')
+      // let ws = new WebSocket(HOST);
+      //let el;
+
+      // let _hash='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoia3MiLCJpYXQiOjE2Mzg1NTUyNTN9.2RI2Vz6qjEMQc0GWfcUdkg2NUDO_6u9RQMnrFUcst_Q';
+
+      // ws.onmessage = ({data}) => {
+      //   console.log(data);
+
+      //   //ws.send("dfasdf")
+      // };
+      // ws.onopen = () => ws.send({
+      //   _id:_hash,
+      //   _func:"_get"
+      // });
+      //ws.send("dfasdf")
+
+      function Send() {
+        alert("Erer");
+        ws.send(
+          JSON.stringify({
+            _id: _hash,
+            prog: "Arabic Song",
+            _func: "update",
+            progId: "445c2979-4830-4703-9069-e8dc9c61b8e4",
+            text: "wwwwwwwwwwwwwwwwwwwwwwwwww",
+          })
+        );
+      }
+    </script>
+  </head>
+  <body>
+    <div id="_app"></div>
+  </body>
+  <script src="./main.js"></script>
+</html>

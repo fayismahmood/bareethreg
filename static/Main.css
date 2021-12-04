@@ -1,0 +1,20 @@
+.OthData{
+    display: block;
+overflow: auto;
+}
+.OthData .container{
+    display: flex;
+    width: max-content;
+}
+.OthData .container .box{
+
+    width: max-content;
+    max-width: 70vw;
+    min-width: 250px;
+    margin: 10px;
+    word-break: break-word;
+}
+._regArea{
+    max-height: 50vh;
+    overflow: auto;
+}
