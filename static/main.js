@@ -76,6 +76,8 @@ function App() {
     return (h("div", { className: "_app" },
         h("div", { class: "tabs" },
             h("ul", null, programs.map((e) => (h("li", { class: ActTab == e.name && "is-active", onclick: () => {
+                    setActProgData(null);
+                    setActProgData(null);
                     setActTab(e.name);
                 }, key: e.name },
                 h("a", null, e.name)))))),

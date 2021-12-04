@@ -42,7 +42,7 @@ let _funcs = {
     //console.log(_,"Asdfads");
     let __ = {
       yours: _.filter((e) => e.house == name),
-      oth: _.filter((e) => e.house !== name).map(e=>({text:e.text})),
+      oth: _.filter((e) => e.house !== name).map((e) => ({ text: e.text })),
       house: name,
       prog,
       _func: "_get",
@@ -86,10 +86,6 @@ let _funcs = {
           );
         }
       });
-
-
-
-      
   },
 };
 
@@ -115,7 +111,12 @@ wss.on("connection", (ws, req) => {
   //console.log(socketId,"HEaddd");
   ws.onmessage = ({ data }) => {
     let _ = JSON.parse(data);
-    var decoded = jwt.verify(_._id, "shhhhh");
+    var decoded;
+    try {
+      decoded = jwt.verify(_._id, "shhhhh");
+    } catch (e) {
+      return 0;
+    }
     let _ret = _funcs[_._func]({ ws: ws, ..._, name: decoded.name, socketId });
     // console.log(_ret);
   };

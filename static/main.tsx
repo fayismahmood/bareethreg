@@ -112,7 +112,10 @@ function App() {
             <li
               class={ActTab == e.name && "is-active"}
               onclick={() => {
+                setActProgData(null)
+                setActProgData(null)
                 setActTab(e.name);
+
               }}
               key={e.name}
             >
